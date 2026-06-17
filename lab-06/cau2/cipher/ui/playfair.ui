@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>829</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Playfair Cipher</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <!-- Title -->
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>370</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="text">
+     <string>PLAYFAIR CIPHER</string>
+    </property>
+   </widget>
+
+   <!-- Key label -->
+   <widget class="QLabel" name="lbl_key">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>60</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Key :</string>
+    </property>
+   </widget>
+
+   <!-- Key input -->
+   <widget class="QLineEdit" name="txt_key">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>78</y>
+      <width>511</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Nhập keyword (vd: MONARCHY)</string>
+    </property>
+   </widget>
+
+   <!-- Show Matrix Button -->
+   <widget class="QPushButton" name="btn_showmatrix">
+    <property name="geometry">
+     <rect>
+      <x>645</x>
+      <y>78</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Matrix</string>
+    </property>
+   </widget>
+
+   <!-- Matrix display label -->
+   <widget class="QLabel" name="lbl_matrix_title">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>118</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Matrix 5x5:</string>
+    </property>
+   </widget>
+
+   <!-- Matrix display -->
+   <widget class="QLabel" name="lbl_matrix">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>112</y>
+      <width>250</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+
+   <!-- Plaintext label -->
+   <widget class="QLabel" name="lbl_plaintext">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Plaintext :</string>
+    </property>
+   </widget>
+
+   <!-- Plaintext input -->
+   <widget class="QTextEdit" name="txt_plaintext">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>215</y>
+      <width>621</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+
+   <!-- Ciphertext label -->
+   <widget class="QLabel" name="lbl_ciphertext">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>400</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ciphertext :</string>
+    </property>
+   </widget>
+
+   <!-- Ciphertext output -->
+   <widget class="QTextEdit" name="txt_ciphertext">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>395</y>
+      <width>621</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+
+   <!-- Encrypt Button -->
+   <widget class="QPushButton" name="btn_encrypt">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>580</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+
+   <!-- Decrypt Button -->
+   <widget class="QPushButton" name="btn_decrypt">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>580</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+
+   <!-- Clear Button -->
+   <widget class="QPushButton" name="btn_clear">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>580</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>829</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
